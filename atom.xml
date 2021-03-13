@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://0xpoker.cn</id>
     <title>0xPoker&apos;s Blog</title>
-    <updated>2021-03-13T14:24:18.697Z</updated>
+    <updated>2021-03-13T15:54:49.486Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://0xpoker.cn"/>
     <link rel="self" href="https://0xpoker.cn/atom.xml"/>
-    <subtitle>一个无所适从的人 | 我尝试去抓住黑暗中的那一抹光，可是我终究是抓不住了</subtitle>
+    <subtitle>一个无所适从的人 · 我尝试去抓住黑暗中的那一抹光，可是我终究是抓不住了</subtitle>
     <logo>https://0xpoker.cn/images/avatar.png</logo>
     <icon>https://0xpoker.cn/favicon.ico</icon>
     <rights>All rights reserved 2021, 0xPoker&apos;s Blog</rights>
