@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://0xpoker.cn</id>
+    <title>0xPoker&apos;s Blog</title>
+    <updated>2021-03-13T13:39:03.655Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://0xpoker.cn"/>
+    <link rel="self" href="https://0xpoker.cn/atom.xml"/>
+    <subtitle>一个无所适从的人</subtitle>
+    <logo>https://0xpoker.cn/images/avatar.png</logo>
+    <icon>https://0xpoker.cn/favicon.ico</icon>
+    <rights>All rights reserved 2021, 0xPoker&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[关于office宏]]></title>
+        <id>https://0xpoker.cn/post/YufIJnF8u/</id>
+        <link href="https://0xpoker.cn/post/YufIJnF8u/">
+        </link>
+        <updated>2021-03-13T11:33:43.000Z</updated>
+    </entry>
+</feed>

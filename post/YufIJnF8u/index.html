@@ -1,0 +1,304 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>0xPoker&#39;s Blog</title>
+<meta name="description" content="一个无所适从的人" />
+<link rel="shortcut icon" href="https://0xpoker.cn/favicon.ico?v=1615642687026">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://0xpoker.cn/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://0xpoker.cn">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://0xpoker.cn/images/avatar.png?v=1615642687026" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">0xPoker&#39;s Blog</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li><a href="#%E6%A6%82%E5%BF%B5%E7%9A%84%E9%97%AE%E9%A2%98">概念的问题</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98">使用问题</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8Eexcel-40%E7%9A%84%E9%97%AE%E9%A2%98">关于Excel 4.0的问题</a></li>
+<li><a href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">解决方案</a></li>
+<li><a href="#demo%E6%96%B9%E6%A1%88">Demo方案</a></li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by 0xPoker | 由 <a href="https://cdn.0xpoker.cn">pocdn</a> 驱动</div>
+    <a class="rss" href="https://0xpoker.cn/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">关于office宏</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2021-03-13 / 3 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://0xpoker.cn/post-images/YufIJnF8u.jpg" alt="">
+        
+        <div class="post-content yue">
+          <h1 id="概念的问题">概念的问题</h1>
+<p>BlackHat Asia 2019中的描述：</p>
+<p>宏不只有VBA现在有两种：</p>
+<ul>
+<li>Visual Basic for Application (VBA)</li>
+<li>Excel 4.0 macro’s (XLM, 只在Excel中)</li>
+</ul>
+<p>VBA != VBA 描述说的实际上有两种</p>
+<ul>
+<li>P-code</li>
+<li>Exe-codes (第二种还没遇到过，粗略的搜了一下好像也没搜到)</li>
+</ul>
+<h1 id="使用问题">使用问题</h1>
+<p>VBA相关的，经过下午的简短了解，在word文档中，可以直接右键解压，然后</p>
+<ul>
+<li>97-2003版的格式中Macro-&gt;VBA文件夹中就是脚本文件，但是被压缩了，标准压缩算法，oletools的olevba可以解析大部分，解压算法是正确的，可以哪天看看流程</li>
+<li>2007版的格式中是vbaProject.bin中存储P-code和代码(二者不影响，不同的情况下优先执行P-code，但是要求保存的时候编译的版本和再次开启时相同，运行一次之后会更新为相同，反编译P-code代码)</li>
+</ul>
+<h1 id="关于excel-40的问题">关于Excel 4.0的问题</h1>
+<p>我理解的是放在Excel单元格里执行的宏脚本，通畅如果没有做别的措施那就可以不执行然后打开直接看到脚本内容，但是看到BH的ppt上讲到一个关于Excel表单的属性<code>{Sheetname}.Visible = xlSheetVeryHidden</code>，除了这个<strong>Very Hidden</strong>外其实还有两个属性值。完整的如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Value</th>
+<th style="text-align:center">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0x00</td>
+<td style="text-align:center">Visible</td>
+</tr>
+<tr>
+<td style="text-align:center">0x01</td>
+<td style="text-align:center">Hidden</td>
+</tr>
+<tr>
+<td style="text-align:center">0x02</td>
+<td style="text-align:center">Very Hidden;不仅仅是设置为hidden，同时没有办法在用户界面打开</td>
+</tr>
+</tbody>
+</table>
+<p>也就是说在某个Sheet下写入Macro，然后设置ActiveSheet.Visible = xlSheetVeryHidden，同时按照之前说的VBA代码和P-code代码不影响的问题，移除VBA代码之后，就只剩下P-code执行了<br>
+还有一种是把Excel 4.0变成动态执行，适用XLM的API(ExecuteExcel4Macro)动态执行Excel4.0的代码</p>
+<h1 id="解决方案">解决方案</h1>
+<ol>
+<li>Python有库可以控制excel内容这些，同时经过测试，被隐藏的sheet可以正确列出来，在尝试可以修改sheet的visible属性吗，就算不修改内容也是可以读出来的</li>
+<li>(不推荐的方案) VBA应该也可以遍历一个workbook的所有sheet，然后设置visible属性，但是既然要执行我们的vba那不是得开编辑模式，这样的话会让原始文件中的Macro也执行，并不是一个比较良好的方案</li>
+</ol>
+<h1 id="demo方案">Demo方案</h1>
+<p>可以使用olefile（Python的一个模块），配合阅读Microsoft xls结构的相关文档解析，Excel文件的结构。具体的结构解析就不详说了，GitHub上有个小哥（估计是写着玩）的一个脚本，解析部分还是比较完善，稍作更改就可以使用（自己找，我怎么会直接把链接给你呢）</p>
+<blockquote>
+<p>于是通过解析Macro Sheet的单元格内容并输出，输出之后再用yara规则检测或者人工看</p>
+</blockquote>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://0xpoker.cn/tag/rURezJXSn/">
+            <span class="flex-auto">Macro</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://0xpoker.cn/tag/3Lrr8Sc76d/">
+            <span class="flex-auto">VBA</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://0xpoker.cn/tag/8VQb2ov3nZ/">
+            <span class="flex-auto">宏</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '95eaceddef6b3236f706',
+    clientSecret: 'a447f1824e0c96f6a8c66775d59ba7daf28e8f9e',
+    repo: 'blog_comments',
+    owner: '490694561',
+    admin: ['490694561'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="https://0xpoker.cn/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
