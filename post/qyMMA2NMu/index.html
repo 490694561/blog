@@ -1,0 +1,404 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>0xPoker&#39;s Blog</title>
+<meta name="description" content="一个无所适从的人 · 我尝试去抓住黑暗中的那一抹光，可是我终究是抓不住了" />
+<link rel="shortcut icon" href="https://0xpoker.cn/favicon.ico?v=1615775931261">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://0xpoker.cn/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://0xpoker.cn">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://0xpoker.cn/images/avatar.png?v=1615775931261" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">0xPoker&#39;s Blog</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li><a href="#%E6%A0%B7%E6%9C%AC%E6%9D%A5%E6%BA%90">样本来源</a></li>
+<li><a href="#%E6%96%87%E4%BB%B6%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A">文件与自动分析报告</a></li>
+<li><a href="#%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7">分析工具</a></li>
+<li><a href="#%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B">分析过程</a></li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.2s">
+          关于我
+        </a>
+      
+    
+      
+        <a href="/post/filecdn" class="menu" style="animation-delay: 0.4s" target="_blank">
+          高速下载源
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.6000000000000001s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.8s">
+          标签云
+        </a>
+      
+    
+      
+        <a href="/post/friends" class="menu" style="animation-delay: 1s">
+          朋友们
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by 0xPoker | 由 <a href="https://cdn.0xpoker.cn">pocdn</a> 驱动</div>
+    <a class="rss" href="https://0xpoker.cn/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">中国移动伪基站短信中诈骗软件软件</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2021-03-15 / 5 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://0xpoker.cn/post-images/qyMMA2NMu.jpeg" alt="">
+        
+        <div class="post-content yue">
+          <h1 id="样本来源">样本来源</h1>
+<p><a href="http://www.52pojie.cn/thread-1002692-1-1.html"><strong>通过10086发送的诈骗短信</strong></a></p>
+<h1 id="文件与自动分析报告">文件与自动分析报告</h1>
+<p><a href="https://www.maldun.com/analysis/YXNkZmRzZmFkc2YzNTM5NjJkc2Zhc2RmYXNkZg==/">恶意软件分析 &amp; URL链接扫描 免费在线病毒分析平台 | 魔盾安全分析</a></p>
+<h1 id="分析工具">分析工具</h1>
+<ul>
+<li>jadx</li>
+<li>魔盾行为分析</li>
+</ul>
+<h1 id="分析过程">分析过程</h1>
+<blockquote>
+<p>第一次使用魔盾这个东西，感觉是挺好用的。</p>
+</blockquote>
+<p>首先，关注包名，这肯定不是中国移动的，有这东西的可以卸载了。</p>
+<figure data-type="image" tabindex="1"><img src="https://0xpoker.cn/post-images/1615774310504.png" alt="" loading="lazy"></figure>
+<p>之后看<strong>MainActivity</strong>能看到</p>
+<figure data-type="image" tabindex="2"><img src="https://0xpoker.cn/post-images/1615774398697.png" alt="" loading="lazy"></figure>
+<p>那么，就是<code>com.phone2.stop.activity.MainActivity</code>，所以去跟进这个类</p>
+<figure data-type="image" tabindex="3"><img src="https://0xpoker.cn/post-images/1615774429049.png" alt="" loading="lazy"></figure>
+<p>能看到执行了几个函数然后初始化了一个字符串，跟进分析</p>
+<hr>
+<p><strong>C0058h.m510a</strong></p>
+<p>这个函数里面</p>
+<figure data-type="image" tabindex="4"><img src="https://0xpoker.cn/post-images/1615774462914.png" alt="" loading="lazy"></figure>
+<p>调用StringBuffer，然后自认为很聪明的初始化了4个字符<code>h~mx</code>，从自动分析的报告上看到这个地方是des密钥，虽然还没看到哪里是des，但是至少说明这个app还有分析的价值，那就继续往后看吧</p>
+<hr>
+<p><strong>getPackageManager().setComponentEnabledSetting(getComponentName(), 2, 1)</strong></p>
+<figure data-type="image" tabindex="5"><img src="https://0xpoker.cn/post-images/1615774486081.png" alt="" loading="lazy"></figure>
+<p>这里是开了个啥，但是我并不会写apk所以只能先搁置，大概理解为开启了某个权限</p>
+<hr>
+<p><strong>C0058h.m511a</strong></p>
+<figure data-type="image" tabindex="6"><img src="https://0xpoker.cn/post-images/1615774533328.png" alt="" loading="lazy"></figure>
+<p>检查是否</p>
+<figure data-type="image" tabindex="7"><img src="https://0xpoker.cn/post-images/1615774602044.png" alt="" loading="lazy"></figure>
+<p>是否初始化手机号码，之后</p>
+<figure data-type="image" tabindex="8"><img src="https://0xpoker.cn/post-images/1615774629025.png" alt="" loading="lazy"></figure>
+<p>所以在第一次启动的时候没有初始化手机号，那么就会返回false执行if中的语句</p>
+<p>取得手机号，同理应该也是默认手机号</p>
+<figure data-type="image" tabindex="9"><img src="https://0xpoker.cn/post-images/1615774655609.png" alt="" loading="lazy"></figure>
+<p>然后<code>C0002f.m9a(C0051a.m360a(context).mo740d())</code>，能发现使用了函数<code>mo740d()</code>这个是获取默认手机号，然后传入<code>m9a()</code>这个函数是使用DES加密获取到的手机号然后存入sharedpreferences，<strong>这时的DES的key为123456</strong></p>
+<figure data-type="image" tabindex="10"><img src="https://0xpoker.cn/post-images/1615774681726.png" alt="" loading="lazy"></figure>
+<blockquote>
+<p>然后在这里就有个巨大的bug，我也不清楚程序员是咋想的</p>
+</blockquote>
+<p>能看到上图的<code>m580a</code>这个函数，是相当于<code>hexdecode</code>函数，传入的数据即为获取到的数据，也就是手机号，那么在手机号的情况下手机号为11位不满足偶数位，他也没有填充，而且如下图所示，除了手机号用了这个方法，邮箱号和邮箱密码也用了同样的算法，那么邮箱号中特殊字符如<code>@</code>就是没法转换的，所以这里一定会报错的鸭</p>
+<p>写了个程序，可以自己测一下</p>
+<pre><code class="language-java">import java.io.*;
+class test  
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		System.out.println(bytesToHex(m580a(&quot;165&quot;)));
+	}
+	
+	public static byte[] m580a(String str) {
+        byte[] bytes = str.getBytes();
+        int length = bytes.length;
+        byte[] bArr = new byte[(length / 2)];
+        for (int i = 0; i &lt; length; i += 2) {
+            bArr[i / 2] = (byte) Integer.parseInt(new String(bytes, i, 2), 16);
+        }
+        return bArr;
+    }
+    
+    public static String bytesToHex(byte[] bytes) {  
+        StringBuffer sb = new StringBuffer();  
+        for(int i = 0; i &lt; bytes.length; i++) {  
+            String hex = Integer.toHexString(bytes[i] &amp; 0xFF);  
+            if(hex.length() &lt; 2){  
+                sb.append(0);  
+            }  
+            sb.append(hex);  
+        }  
+        return sb.toString();  
+    }
+}
+</code></pre>
+<hr>
+<p>所以每次还是获取的默认值？想保存的数据一个都没存进去？这程序员可能思维跟我们不一样吧。。。。。。</p>
+<p>反正依次调用的函数为：</p>
+<ul>
+<li>初始化接收短信的手机号[是一个沈阳的手机号]</li>
+<li>初始化发邮件的邮箱号[是163邮箱]</li>
+<li>初始化收邮件的邮箱号[和发邮件的是同一个]</li>
+<li>初始化发邮件邮箱密码</li>
+<li>初始化endtime？[这里有点迷的就是难道这个东西还会自己停的嘛]</li>
+</ul>
+<hr>
+<p>之后判断是否发送手机信息[phone_info]，如果没有发过就通过手机号发送手机信息</p>
+<figure data-type="image" tabindex="11"><img src="https://0xpoker.cn/post-images/1615774776089.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="https://0xpoker.cn/post-images/1615774794789.png" alt="" loading="lazy"></figure>
+<p>也就是通过SMS发送手机基本信息到接收短信的手机号上</p>
+<p>发送之前还会把一部分关键词改个写法，估计是bypass基站检测吧，但是换句话说，基站检测有这么弱的吗？</p>
+<figure data-type="image" tabindex="13"><img src="https://0xpoker.cn/post-images/1615774915588.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="14"><img src="https://0xpoker.cn/post-images/1615774994168.png" alt="" loading="lazy"></figure>
+<p>发送之后马上调用函数<code>C0002f.m12b</code></p>
+<p>删除刚刚发送的SMS信息</p>
+<figure data-type="image" tabindex="15"><img src="https://0xpoker.cn/post-images/1615775018750.png" alt="" loading="lazy"></figure>
+<hr>
+<p>C0008d.m72a</p>
+<p>随之调用这个函数启动多线程</p>
+<figure data-type="image" tabindex="16"><img src="https://0xpoker.cn/post-images/1615775086566.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="17"><img src="https://0xpoker.cn/post-images/1615775151962.png" alt="" loading="lazy"></figure>
+<p>这里的<code>C0008d.m75d</code>是发送所有手机短信到接收邮箱，当短信同时包含</p>
+<figure data-type="image" tabindex="18"><img src="https://0xpoker.cn/post-images/1615775145528.png" alt="" loading="lazy"></figure>
+<p>这两个东西的时候就不发了？</p>
+<p>然后C0008d.m76e是发送通讯录联系人到接收邮箱，当联系人包含</p>
+<figure data-type="image" tabindex="19"><img src="https://0xpoker.cn/post-images/1615775251880.png" alt="" loading="lazy"></figure>
+<p>这两个任意之一的时候也不发了？</p>
+<blockquote>
+<p>有张三没李四，有悟空没八戒。。。。。。。。。我的思维是跟不上的</p>
+</blockquote>
+<hr>
+<p>在MainActivity的最后是</p>
+<figure data-type="image" tabindex="20"><img src="https://0xpoker.cn/post-images/1615775322193.png" alt="" loading="lazy"></figure>
+<p>貌似就跟他写的一样就是询问提高这个程序的权限吧</p>
+<p>然后会在如下图所示的函数回调得到的结果，并且发送结果</p>
+<figure data-type="image" tabindex="21"><img src="https://0xpoker.cn/post-images/1615775339976.png" alt="" loading="lazy"></figure>
+<hr>
+<p>调用<code>m445b</code>创建启动服务</p>
+<blockquote>
+<p>应该是启动服务吧，写的bootservice</p>
+</blockquote>
+<figure data-type="image" tabindex="22"><img src="https://0xpoker.cn/post-images/1615775359676.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="23"><img src="https://0xpoker.cn/post-images/1615775401227.png" alt="" loading="lazy"></figure>
+<p>启动的服务会监听短信接收动作，并且在自己启动的时候启动第二个服务SecondService</p>
+<p>看事件函数onDestroy里有启动自己的操作，估计就是不让这么轻易的关闭这个服务，而且在SecondService里面也能看出这个第二个服务是个deamon，专门保护第一个服务的</p>
+<figure data-type="image" tabindex="24"><img src="https://0xpoker.cn/post-images/1615775422792.png" alt="" loading="lazy"></figure>
+<hr>
+<p>在第一个启动的服务里会调用两个函数，<code>m321a</code>和<code>m322b</code></p>
+<p>也就是这两个函数注册了监听短信的操作</p>
+<blockquote>
+<p>到此为止应该就是差不多分析完了，这里面还有邮箱账号密码，有兴趣自己查查吧</p>
+</blockquote>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://0xpoker.cn/tag/I3Qfzg53w/">
+            <span class="flex-auto">Malware</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://0xpoker.cn/tag/z-Iu3Tlfnd/">
+            <span class="flex-auto">安卓</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://0xpoker.cn/tag/SDvSvElr6N/">
+            <span class="flex-auto">Java</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://0xpoker.cn/post/filecdn/">
+                <h3 class="post-title">
+                  高速下载源
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '95eaceddef6b3236f706',
+    clientSecret: 'a447f1824e0c96f6a8c66775d59ba7daf28e8f9e',
+    repo: 'blog_comments',
+    owner: '490694561',
+    admin: ['490694561'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="https://0xpoker.cn/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
