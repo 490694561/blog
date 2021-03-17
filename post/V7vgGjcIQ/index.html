@@ -34,8 +34,9 @@
           </p>
           <div class="toc-container hidden lg:block">
             <ul class="markdownIt-TOC">
-<li><a href="#%E6%A0%A1%E5%8F%8B%E5%B8%88%E5%82%85">校友师傅</a></li>
-<li><a href="#%E6%A0%A1%E5%A4%96%E5%B8%88%E5%82%85">校外师傅</a></li>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#%E9%92%88%E5%AF%B9%E6%A0%87%E5%87%86json%E7%9A%84%E6%96%B9%E5%BC%8F">针对标准Json的方式</a></li>
+<li><a href="#%E9%92%88%E5%AF%B9%E4%B8%80%E6%9D%A5%E5%B0%B1%E6%98%AF%E4%B8%80%E4%B8%AAarray%E7%9A%84%E6%83%85%E5%86%B5">针对一来就是一个Array的情况</a></li>
 </ul>
 
           </div>
@@ -94,27 +95,62 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">友情链接</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">Golang处理不定json问题</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2021-03-14 / 1 min read
+          2021-03-17 / 2 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://0xpoker.cn/post-images/friends.jpg" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://0xpoker.cn/post-images/V7vgGjcIQ.jpeg" alt="">
         
         <div class="post-content yue">
-          <h1 id="校友师傅">校友师傅</h1>
-<p><a href="https://panda0s.top/">PandaOs</a> | <a href="https://zoniony.github.io/#/">zoniony</a> | <a href="https://qimaidoukanluori.github.io/">骑麦兜看落日</a> | <a href="https://evoa.me/">evoa</a></p>
-<h1 id="校外师傅">校外师傅</h1>
-<p><a href="https://www.smi1e.top">Sm1le</a></p>
+          <h1 id="前言">前言</h1>
+<p>之前在网上查找相关的内容时，并没有找到比较好的参考资料，大部分都是说取用别人封装好的包，或者遍历<strong>k v</strong>来实现，于是今天发现了直接用map来实现的方式，所以记录一下，方便下一次使用。最简单的使用struct来直接处理json，那种方法就不过多赘述了，比较浪费时间，网上一搜一大把。</p>
+<h1 id="针对标准json的方式">针对标准Json的方式</h1>
+<p>这里的标准意思是最外层是由<code>{}</code>包围的。这种json比较标准易于处理。</p>
+<pre><code class="language-go">tmpT := new(map[string]interface{})
+err := json.Unmarshal(resp.Body, tmpT)
+if err != nil {
+    log.Fatalln(err)
+}
+log.Println(*tmpT[&quot;xxxxx&quot;])
+</code></pre>
+<p>这种方法看起来就很亲和了，不需要每次去新定义结构体那些，不过如果在确定json的内容的情况下，还是推荐用<strong>struct</strong>吧。</p>
+<h1 id="针对一来就是一个array的情况">针对一来就是一个Array的情况</h1>
+<p>这里的情况大概就是最外层不是 <code>{}</code> ，而是 <code>[]</code> 的情况。</p>
+<pre><code class="language-go">tmpT := new([]map[string]interface{})
+err := json.Unmarshal(resp.Body, tmpT)
+checkError(err)
+for _, row := range *tmpT {
+	log.Println(row[&quot;xxxxx&quot;])
+}
+</code></pre>
+<p>这样就把go的不定json解析给搞定了。（我TCL，逃）</p>
 
         </div>
 
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://0xpoker.cn/tag/9DPvuRrEE/">
+            <span class="flex-auto">go</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://0xpoker.cn/tag/hS30Tj3ajp/">
+            <span class="flex-auto">日常</span>
+          </a>
         
 
 
         <div class="flex justify-between py-8">
           
 
+          
+            <div class="next-post">
+              <a href="https://0xpoker.cn/post/qyMMA2NMu/">
+                <h3 class="post-title">
+                  中国移动伪基站短信中诈骗软件软件
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
 
